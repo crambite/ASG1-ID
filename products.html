@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <title>Vortex Web</title>
 </head>
 <body>
-    <div class = "container">
-        <!-- Menu Button -->
-        <button class="menu-toggle" id="menu-toggle"></button>
-        <nav class="side-menu" id="side-menu">
-            <button class="menu-close" id="menu-close"></button>
+    <!-- Menu Button -->
+    <div class="menu-bar">
+        <button class = "menu-toggle" id = "menu-toggle"><img src = "Images/menu.png" alt = "menu"></button>
+        <nav class = "side-menu" id = "side-menu">
+            <button class = "menu-close" id = "menu-close"><img src = "Images/menu.png" alt = "menu"></button>
 
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,64 +22,148 @@
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
-        
+    </div>
+
+    <div class="container">
         <!-- Scroll to top button -->
-        <button class = "scroll-top" id = "scroll-top">▲</button>
+        <button class="scroll-top" id="scroll-top">▲</button>
 
         <header>
-            <h1>Our Products</h1>
+            <h1>What We Offer</h1>
+            <p>Our app provides a complete development platform designed to help creators build high-quality, interactive experiences with speed and precision.</p>
         </header>
 
         <!-- Product options -->
-        <main class = "products">
-
+        <main class="products">
             <!-- Free Plan -->
-            <div class = "plan-card">
-                <h2 class = "plan-title">Free Plan</h2>
-                <p class = "plan-price">$0.00 per month</p>
-                <ul class = "plan-features">
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <li>Consectetur adipiscing elit</li>
-                    <li>Sed do eiusmod tempor</li>
-                    <li>Incididunt ut labore</li>
-                    <li>Et dolore magna aliqua</li>
-                    <li>Ut enim ad minim veniam</li>
+            <div class="plan-card">
+                <h2 class="plan-title">Free Plan</h2>
+                <p class="plan-price">$0.00 per month</p>
+
+                <ul class="plan-features">
+                    <li>5 GB cloud storage</li>
+                    <li>2 active projects</li>
+                    <li>Basic add-on support</li>
+                    <li>Community support</li>
+                    <li>Core features only</li>
                 </ul>
-                <a class = "plan-button" href = "checkout.html">Lorem Ipsum</a>
+
+                <a class="plan-button">Download for free</a>
             </div>
 
             <!-- Plan 1 -->
-            <div class = "plan-card">
-                <h2 class = "plan-title">Plan 1</h2>
-                <p class = "plan-price">$9.39 per month</p>
-                <ul class = "plan-features">
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <li>Consectetur adipiscing elit</li>
-                    <li>Sed do eiusmod tempor</li>
-                    <li>Incididunt ut labore</li>
-                    <li>Et dolore magna aliqua</li>
-                    <li>Ut enim ad minim veniam</li>
+            <div class="plan-card">
+                <h2 class="plan-title">Personal Plan</h2>
+                <p class="plan-price">$9.99 per month</p>
+
+                <ul class="plan-features">
+                    <li>50 GB cloud storage</li>
+                    <li>10 active projects</li>
+                    <li>Standard add-ons included</li>
+                    <li>Email support</li>
+                    <li>Advanced core features</li>
+                    <li>Basic analytics</li>
                 </ul>
-                <a class = "plan-button" href = "checkout.html">Lorem Ipsum</a>
+
+                <a class="plan-button">Get Started</a>
             </div>
 
             <!-- Plan 2 -->
-            <div class = "plan-card">
-                <h2 class = "plan-title">Plan 2</h2>
-                <p class = "plan-price">$15.39 per month</p>
-                <ul class = "plan-features">
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <li>Consectetur adipiscing elit</li>
-                    <li>Sed do eiusmod tempor</li>
-                    <li>Incididunt ut labore</li>
-                    <li>Et dolore magna aliqua</li>
-                    <li>Ut enim ad minim veniam</li>
+            <div class="plan-card">
+                <h2 class="plan-title">Premium Plan</h2>
+                <p class="plan-price">$29.99 per month</p>
+
+                <ul class="plan-features">
+                    <li>Unlimited cloud storage</li>
+                    <li>Unlimited active projects</li>
+                    <li>Advanced add-ons & priority features</li>
+                    <li>Priority support</li>
+                    <li>All features</li>
+                    <li>Advanced analytics & insights</li>
+                    <li>Early access to new features</li>
                 </ul>
-                <a class = "plan-button" href = "checkout.html">Lorem Ipsum</a>
+
+                <a class="plan-button">Buy Premium</a>
             </div>
         </main>
     </div>
-    
+
+    <!-- Checkout modal -->
+    <div class="checkout-overlay" id="checkout-overlay">
+        <div class="checkout-modal">
+            <div class="checkout-header">
+                <div>
+                    <h2>Checkout</h2>
+                    <p class="checkout-subtitle">
+                        You are subscribing to <span id="checkout-plan-name">Free Plan</span>
+                    </p>
+                </div>
+                <button class="checkout-close" id="checkout-close">X</button>
+            </div>
+
+            <!-- Total row -->
+            <div class="checkout-section">
+                <div class="checkout-total">
+                    <span>Total due today</span>
+                    <span id="checkout-price" data-price="0.00">$0.00 per month</span>
+                </div>
+            </div>
+
+            <!-- Promo code -->
+            <div class="checkout-section">
+                <label class="checkout-label">Have a promo code?</label>
+                <div class="checkout-row">
+                    <input
+                        id="promo-code-input"
+                        type="text"
+                        class="checkout-input"
+                        placeholder="Enter code (e.g. NEWMEMBER)"
+                    >
+                    <button
+                        id="promo-apply-btn"
+                        type="button"
+                        class="checkout-small-btn"
+                    >
+                        Apply
+                    </button>
+                </div>
+                <p id="promo-message"></p>
+            </div>
+
+            <!-- Card info -->
+            <div class="checkout-section">
+                <label class="checkout-label">Card Information</label>
+                <input
+                    type="text"
+                    class="checkout-input"
+                    placeholder="0000 0000 0000 0000"
+                >
+            </div>
+
+            <div class="checkout-section checkout-row">
+                <div class="checkout-field">
+                    <label class="checkout-label">Expiration</label>
+                    <input
+                        type="text"
+                        class="checkout-input"
+                        placeholder="MM / YY"
+                    >
+                </div>
+                <div class="checkout-field">
+                    <label class="checkout-label">CVC</label>
+                    <input
+                        type="text"
+                        class="checkout-input"
+                        placeholder="123"
+                    >
+                </div>
+            </div>
+
+            <button class="checkout-submit">✓ Complete Payment</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class = "footer">
         <div class = "footer-links">
             <a href = "index.html">Home</a>
@@ -88,7 +172,7 @@
             <a href = "contact.html">Contact</a>
         </div>
 
-        <p>© 2025 Your Company Name. All rights reserved.</p>
+        <p>© 2025 Vortex. All rights reserved.</p>
     </footer>
 </body>
 </html>
