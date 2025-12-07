@@ -1,31 +1,31 @@
-# Vortex Web (h1)
+# Vortex Web 
 Vortex Web is a modern web platform designed to showcase the game engine, Vortex Engine, in a clear and engaging way. The project focuses on combining clean and minimalistic design with a informational webpage. By keeping the interface simple, the project aims to clearly communicate what Vortrex Engine offers and why it is worth Purchasing.
 
 In short, Vortex acts as both a product marketing site, demonstrating to keen game developers and hobbyists what Vortex Engine is capable of.
 
-# Design Process (h1)
+# Design Process 
 
-# Target Users (h2)
+## Target Users 
 Vortex Web is designed for game developers or hobbyists who are looking for a game engine and may be interested in Vortex Engine
 
-# User Goals (h2)
+## User Goals 
 Users visiting Vortex Web want to understand what Vortex Engine does quickly, compare available plans and features and have a seamless experience between desktop and mobile.
 
-# Design Decisions (h2)
+## Design Decisions 
 To meet these requests, Vortex Web uses a card based layout to present information. A minimalistic, yet techy colour scheme was chosen to not push users away with an overly decorated website. To ensure seamless switching of desktop and mobile, the menu bar was pushed to the top of the page permanently on the desktop layout; while the mobile uses a drop down button which when clicked, the menu opens from the left side. A simple checkout modal was used to not break the browsing flow.
 
-# User Stories (h2)
+## User Stories 
 As a new user, I want to view the product features, so that I can understand what the service offers.
 As a potential customer, I want to compare plans, so that I can choose the option that suits me best.
 As a customer, I want to apply a promo code during checkout, so that I can receive a discount.
 As a mobile user, I want the website to work well on smaller screens, so that I can use it anywhere.
 
-# Wireframe (h2)
+## Wireframe 
 Figma Link = https://www.figma.com/design/UJArasxPPeJY0yApQe0mTk/ID_S10272167C_DavenLim_Assg1_wireframe?node-id=0-1&t=md9R3nnf3GCeH0HV-1
 
 # Features (h1)
 
-# Existing Features (h2)
+## Existing Features 
 ALL featuers were implemented with the help of AI, however personal changes were made
 Login System
 Allows registered users to log in using stored credentials. Use these to test (left is username, right is password):
@@ -53,43 +53,43 @@ Allows users to apply a valid promo code (e.g. NEWMEMBER) to receive a discount.
 Scroll-to-Top Button
 Improves usability on longer pages by allowing quick navigation back to the
 
-# Features Left to Implement (h2)
+## Features Left to Implement 
 Properly working Login and Register system that validates dupe usernames and saves accross refresh.
 
-# Technologies Used (h1)
+# Technologies Used 
 HTML
 CSS
 JavaScript
 
-# Testing (h1)
+# Testing 
 
-# Login Page (h2)
+## Login Page 
 Attempted login with empty fields - error message shown
 Attempted login with incorrect credentials - error message shown
 Attempted login with valid credentials - successful login and redirect
 
-# Registration Page
+## Registration Page
 Submitted form with empty fields - validation error shown
 Submitted form with mismatched passwords - validation error shown
 Successfully registered a new user - redirected to login page
 
-# Checkout (h2)
+## Checkout 
 Opened checkout from different plans - correct plan name and price displayed
 Applied valid promo code - discounted price applied
 Applied invalid promo code - error message displayed
 
-# Cross-Browser & Responsive Testing (h2)
+## Cross-Browser & Responsive Testing 
 Tested on Chrome, Edge, and Brave
 Tested on multiple screen sizes using browser dev tools
 Layout adapts correctly for mobile, tablet, and desktop views
 
-# Known Issues / Limitations (h2)
+## Known Issues / Limitations 
 Login system is client-side only and not suitable for production use
 No backend validation or payment processing implemented
 
 # Credits (h1)
 
-# Media (h2)
+## Media 
 Menu icon - https://nohat.cc/f/call-610-465-white-hamburger-menu-icon-png/m2i8G6G6b1m2A0G6-201907232310.html 
 X logo - https://commons.wikimedia.org/wiki/File:X_logo.jpg 
 FaceBook Logo - https://commons.wikimedia.org/wiki/File:2021_Facebook_icon.svg 
@@ -99,5 +99,5 @@ Product Image - Original Work (created by me in blender)
 
 Special thanks Adam, Joshua, Marcus and Zakir for letting me use their pictures
 
-# Acknowledgements (h2)
+## Acknowledgements 
 I received inspiration for this project from https://flutel.com/ and https://unity.com/
